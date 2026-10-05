@@ -12,8 +12,8 @@ Download and verify:
 
 ```bash
 # from the repository root
-wget -O weights/best_sardet100k.pt <RELEASE_URL>/best_sardet100k.pt
-wget -O weights/best_sarship.pt    <RELEASE_URL>/best_sarship.pt
+wget -O weights/best_sardet100k.pt https://github.com/ppface1991/eat-sar/releases/download/weights/best_sardet100k.pt
+wget -O weights/best_sarship.pt    https://github.com/ppface1991/eat-sar/releases/download/weights/best_sarship.pt
 sha256sum -c weights/SHA256SUMS
 ```
 
@@ -25,8 +25,8 @@ Ungated test AP@0.5: 0.940 (SARDet-100K) / 0.962 (SAR-Ship-Dataset).
 ## SHA256SUMS
 
 ```
-<PASTE_SHA256_best_sardet100k.pt>
-<PASTE_SHA256_best_sarship.pt>
+8C258E99D40BE12D7DDE0BDB2A145D2BE2DEAF88F8C6BCF8C68B88BD77A1F725
+5B8FA6A5978A48DB62E4E4B588256EFD3A91C5381E7CAF495EBD763F3D1B2CF7
 ```
 
 *The checksum lines above are placeholders; replace them after uploading
