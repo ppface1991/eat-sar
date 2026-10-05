@@ -1,0 +1,78 @@
+{
+  "source": "D:\\Project\\eat-sar\\eat-sar\\eat-sar\\revision_out\\sarship_main.json",
+  "target": "D:\\Project\\eat-sar\\eat-sar\\eat-sar\\revision_out\\sardet_main.json",
+  "edges_A": [
+    -Infinity,
+    2.615399432466195,
+    17.865234168344077,
+    Infinity
+  ],
+  "edges_B": [
+    -Infinity,
+    4.530442939630511,
+    19.961964940779616,
+    Infinity
+  ],
+  "edges_requantile": [
+    -Infinity,
+    4.58549938692448,
+    20.421258933658155,
+    Infinity
+  ],
+  "T_A": {
+    "low": 0.425,
+    "medium": 0.475,
+    "high": 0.55
+  },
+  "T_B": {
+    "low": 0.4,
+    "medium": 0.425,
+    "high": 0.45
+  },
+  "results": {
+    "baseline_T0.40": {
+      "P": 0.9173491480749317,
+      "R": 0.9075246787111194,
+      "F1": 0.9124104676747343,
+      "AP": 0.8910633513508981,
+      "n_pred": 10623,
+      "n_gt": 10738,
+      "dAP_pp": 0.0,
+      "bin_occupancy": null
+    },
+    "raw_transfer(edges_A,T_A)": {
+      "P": 0.9440063878630602,
+      "R": 0.8807971689327622,
+      "F1": 0.9113070289540878,
+      "AP": 0.8726284622498969,
+      "n_pred": 10019,
+      "n_gt": 10738,
+      "dAP_pp": -1.8434889101001217,
+      "bin_occupancy": {
+        "low": 1737,
+        "medium": 2396,
+        "high": 2363
+      }
+    },
+    "requantile(edges_tgt_unlabelled,T_A)": {
+      "P": 0.9424589347934296,
+      "R": 0.8816353138387036,
+      "F1": 0.9110330558629649,
+      "AP": 0.872618106236687,
+      "n_pred": 10045,
+      "n_gt": 10738,
+      "dAP_pp": -1.8445245114211084,
+      "bin_occupancy": null
+    },
+    "in_domain(edges_B,T_B)": {
+      "P": 0.926831607211354,
+      "R": 0.9000745017694171,
+      "F1": 0.913257110460172,
+      "AP": 0.8910624711062556,
+      "n_pred": 10428,
+      "n_gt": 10738,
+      "dAP_pp": -8.802446425093535e-05,
+      "bin_occupancy": null
+    }
+  }
+}

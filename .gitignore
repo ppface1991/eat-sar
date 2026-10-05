@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Datasets (not redistributed)
+SAR-Ship-Dataset/
+SARDet-100K/
+data/
+
+# Local work dirs, caches, training runs
+work/
+runs/
+runs_backup/
+revision_out/
+cache_preds/
+*.npz
+*.pt
+
+# Local machine configuration
+env.cmd
+*.local.yaml
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.zip
+*.rar
+*.log
+*.pid
+eat-sar/
+repo_publish_kit/
+revision_kit_v1/
+revision_kit_v2/
+configs_old/
+docs_old/
+scripts_old/
+src_old/
+cache/
+*.bak*
+autodl_status*.txt

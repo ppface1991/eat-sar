@@ -1,0 +1,84 @@
+# ============================================================
+# Environment-Adaptive Thresholding for SAR Ship Detection
+# Default configuration (paths assume AutoDL-style layout)
+# ============================================================
+
+project:
+  name: eat-sar
+  seed: 42
+  device: "cuda:0"
+  workers: 8
+
+paths:
+  # Root data dir on AutoDL (例如 /root/autodl-tmp/...)
+  data_root: "/root/autodl-tmp/eat-sar"
+  # Outputs
+  runs_dir: "./runs"
+  cache_dir: "./cache"
+  era5_dir: "./cache/era5"
+  meta_dir: "./cache/meta"
+
+datasets:
+  # SARDet-100K: 只用 ship 类别子集
+  sardet100k:
+    enabled: true
+    root: "/autodl-fs/data/eat-sar/SARDet-100K"
+    images_subdir: "Images"            # 内部按 train/val/test 划分
+    annotations: "Annotations"         # COCO 格式
+    ship_category_id: null             # 自动从 categories 中查找 "ship"
+    meta_csv: "./cache/meta/sardet100k_meta.csv"
+
+  # SAR-Ship-Dataset (GF-3 + Sentinel-1)
+  sarship:
+    enabled: true
+    root: "/autodl-fs/data/eat-sar/SAR-Ship-Dataset"
+    images_subdir: "JPEGImages"
+    annotations_subdir: "Annotations_new"  # VOC XML (shipped name)
+    meta_csv: "./cache/meta/sarship_meta.csv"
+
+era5:
+  # 海气象变量
+  variables:
+    - "10m_u_component_of_wind"
+    - "10m_v_component_of_wind"
+    - "significant_height_of_combined_wind_waves_and_swell"
+  # 时间/空间分辨率
+  product_type: "reanalysis"
+  grid: [0.25, 0.25]
+  # 分级阈值 (m/s) —— 风速; 可在 02_env 步骤复核
+  wind_bins: [0.0, 5.0, 10.0, 100.0]
+  wind_labels: ["low", "mid", "high"]
+  # 有效波高分级 (m)
+  swh_bins: [0.0, 1.25, 2.5, 100.0]
+  swh_labels: ["calm", "moderate", "rough"]
+
+train:
+  model: "yolov8s.pt"
+  imgsz: 640
+  epochs: 100
+  batch: 32
+  optimizer: "SGD"
+  lr0: 0.01
+  patience: 20
+  # 是否单类检测 (ship-only)
+  single_cls: true
+
+threshold:
+  # 在验证集上扫描的 score 阈值
+  scan_min: 0.05
+  scan_max: 0.90
+  scan_step: 0.05
+  # 评估时使用的 IoU 阈值（COCO 风格）
+  iou_thresh: 0.5
+  # 选最优阈值的指标
+  selection_metric: "f1"   # 可选: f1 | map50
+
+adaptive:
+  # 用哪个环境变量做自适应（wind | swh | both）
+  env_feature: "wind"
+  # 拟合形式
+  fit_forms:
+    - "piecewise"   # 分段常数
+    - "linear"      # T = a*e + b
+  # 拟合所用数据：从 threshold scan 结果的 (env_value, best_thr) 配对中得到
+  cv_folds: 5

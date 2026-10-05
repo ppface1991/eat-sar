@@ -1,0 +1,252 @@
+% ============================================================
+% refs.bib — Bibliography for GRSL letter on environment-conditioned
+% score thresholding for SAR ship detection
+% ============================================================
+
+% ---- YOLOv8 ----
+@misc{yolov8,
+  author       = {Glenn Jocher and Ayush Chaurasia and Jing Qiu},
+  title        = {{Ultralytics YOLOv8}},
+  year         = {2023},
+  howpublished = {\url{https://github.com/ultralytics/ultralytics}},
+  note         = {Ultralytics, accessed 2024}
+}
+
+% ---- SARDet-100K ----
+@inproceedings{sardet100k,
+  author    = {Yuxuan Li and Xiang Li and Weijie Li and Qibin Hou and
+               Li Liu and Ming-Ming Cheng and Jian Yang},
+  title     = {{SARDet-100K}: Towards Open-Source Benchmark and ToolKit for
+               Large-Scale {SAR} Object Detection},
+  booktitle = {Advances in Neural Information Processing Systems
+               (NeurIPS)},
+  year      = {2024},
+  note      = {arXiv:2403.06534}
+}
+
+% ---- SAR-Ship-Dataset ----
+@article{sarship2019,
+  author    = {Yuanyuan Wang and Chen Wang and Hong Zhang and Yinghua Dong
+               and Sitao Wei},
+  title     = {A {SAR} Dataset of Ship Detection for Deep Learning under
+               Complex Backgrounds},
+  journal   = {Remote Sensing},
+  year      = {2019},
+  volume    = {11},
+  number    = {7},
+  pages     = {765},
+  publisher = {MDPI},
+  doi       = {10.3390/rs11070765}
+}
+
+% ---- CFAR seminal: Finn & Johnson 1968 ----
+@article{finn1968,
+  author    = {H.~M. Finn and R.~S. Johnson},
+  title     = {Adaptive Detection Mode with Threshold Control as a Function
+               of Spatially Sampled Clutter-Level Estimates},
+  journal   = {RCA Review},
+  year      = {1968},
+  volume    = {29},
+  number    = {3},
+  pages     = {414--464}
+}
+
+% ---- Goldstein 1973 (alternative CFAR seminal) ----
+@article{goldstein1973,
+  author    = {G.~B. Goldstein},
+  title     = {False-Alarm Regulation in Log-Normal and {Weibull} Clutter},
+  journal   = {IEEE Transactions on Aerospace and Electronic Systems},
+  year      = {1973},
+  volume    = {AES-9},
+  number    = {1},
+  pages     = {84--92},
+  doi       = {10.1109/TAES.1973.309740}
+}
+
+% ---- ERA5 ----
+@article{hersbach2020,
+  author    = {Hans Hersbach and others},
+  title     = {The {ERA5} Global Reanalysis},
+  journal   = {Quarterly Journal of the Royal Meteorological Society},
+  year      = {2020},
+  volume    = {146},
+  number    = {730},
+  pages     = {1999--2049},
+  doi       = {10.1002/qj.3803}
+}
+
+% ---- Soft-NMS ----
+@inproceedings{bodla2017,
+  author    = {Navaneeth Bodla and Bharat Singh and Rama Chellappa
+               and Larry S.\ Davis},
+  title     = {Soft-{NMS} --- Improving Object Detection with One Line of Code},
+  booktitle = {Proceedings of the IEEE International Conference on Computer
+               Vision (ICCV)},
+  year      = {2017},
+  pages     = {5561--5569},
+  doi       = {10.1109/ICCV.2017.593}
+}
+
+% ---- Sea-state effects on SAR / TerraSAR-X ship surveillance ----
+@article{brusch2011,
+  author    = {Susanne Brusch and Susanne Lehner and Thomas Fritz and
+               Monique Soccorsi and A.~Soloviev and Bram van Schie},
+  title     = {Ship Surveillance with {TerraSAR-X}},
+  journal   = {IEEE Transactions on Geoscience and Remote Sensing},
+  year      = {2011},
+  volume    = {49},
+  number    = {3},
+  pages     = {1092--1103},
+  doi       = {10.1109/TGRS.2010.2090644}
+}
+
+% ---- Deep SAR ship detection: Cui et al. 2019 TGRS (DAPN) ----
+@article{cuiTGRS2019,
+  author    = {Zongyong Cui and Qi Li and Zongjie Cao and Nengyuan Liu},
+  title     = {Dense Attention Pyramid Networks for Multi-Scale Ship Detection
+               in {SAR} Images},
+  journal   = {IEEE Transactions on Geoscience and Remote Sensing},
+  year      = {2019},
+  volume    = {57},
+  number    = {11},
+  pages     = {8983--8997},
+  doi       = {10.1109/TGRS.2019.2923988}
+}
+
+% ---- Confidence calibration (classification) ----
+@inproceedings{guo2017calibration,
+  author    = {Chuan Guo and Geoff Pleiss and Yu Sun and
+               Kilian Q.\ Weinberger},
+  title     = {On Calibration of Modern Neural Networks},
+  booktitle = {Proceedings of the 34th International Conference on Machine
+               Learning (ICML)},
+  year      = {2017},
+  series    = {PMLR},
+  volume    = {70},
+  pages     = {1321--1330}
+}
+
+% ---- Confidence calibration (object detection) ----
+@inproceedings{kuppers2020detcal,
+  author    = {Fabian K{\"u}ppers and Jan Kronenberger and
+               Amirhossein Shantia and Anselm Haselhoff},
+  title     = {Multivariate Confidence Calibration for Object Detection},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision
+               and Pattern Recognition Workshops (CVPRW)},
+  year      = {2020},
+  pages     = {1322--1330}
+}
+
+% ---- Lightweight SAR ship detector (GRSL) ----
+@article{zhang2020grsl,
+  author    = {Tianwen Zhang and Xiaoling Zhang},
+  title     = {{ShipDeNet-20}: An Only 20 Convolution Layers and
+               {\textless}1-{MB} Lightweight {SAR} Ship Detector},
+  journal   = {IEEE Geoscience and Remote Sensing Letters},
+  year      = {2021},
+  volume    = {18},
+  number    = {7},
+  pages     = {1234--1238},
+  doi       = {10.1109/LGRS.2020.2993899}
+}
+
+@article{ward1981,
+  author  = {Ward, K. D.},
+  title   = {Compound Representation of High Resolution Sea Clutter},
+  journal = {Electronics Letters},
+  volume  = {17},
+  number  = {16},
+  pages   = {561--563},
+  year    = {1981}
+}
+
+@book{oliver2004,
+  author    = {Oliver, Chris and Quegan, Shaun},
+  title     = {Understanding Synthetic Aperture Radar Images},
+  publisher = {SciTech Publishing},
+  address   = {Raleigh, NC, USA},
+  year      = {2004}
+}
+
+@inproceedings{kang2017cfar,
+  author    = {Kang, Miao and Leng, Xiangguang and Lin, Zhao and Ji, Kefeng},
+  title     = {A Modified Faster {R-CNN} Based on {CFAR} Algorithm for {SAR} Ship Detection},
+  booktitle = {Proc. Int. Workshop Remote Sens. Intell. Process. (RSIP)},
+  pages     = {1--4},
+  year      = {2017}
+}
+
+@inproceedings{munir2022calib,
+  author    = {Munir, Muhammad Akhtar and Khan, Muhammad Haris and Sarfraz, M. Saquib and Ali, Mohsen},
+  title     = {Towards Improving Calibration in Object Detection Under Domain Shift},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  volume    = {35},
+  year      = {2022}
+}
+
+@article{zhang2022bslm,
+  author  = {Zhang, Tianwen and Zhang, Xiaoling and Shi, Jun and Wei, Shunjun and Wang, Jianguo and Li, Jianwei and Su, Hao and Zhou, Yue},
+  title   = {Balance Scene Learning Mechanism for Offshore and Inshore Ship Detection in {SAR} Images},
+  journal = {IEEE Geoscience and Remote Sensing Letters},
+  volume  = {19},
+  pages   = {1--5},
+  note    = {Art. no. 4004905},
+  year    = {2022}
+}
+
+@inproceedings{wang2021tent,
+  author    = {Wang, Dequan and Shelhamer, Evan and Liu, Shaoteng and Olshausen, Bruno and Darrell, Trevor},
+  title     = {Tent: Fully Test-Time Adaptation by Entropy Minimization},
+  booktitle = {Int. Conf. Learn. Represent. (ICLR)},
+  year      = {2021}
+}
+
+@inproceedings{zhang2020dynamicrcnn,
+  author    = {Zhang, Hongkai and Chang, Hong and Ma, Bingpeng and Wang, Naiyan and Chen, Xilin},
+  title     = {Dynamic {R-CNN}: Towards High Quality Object Detection via Dynamic Training},
+  booktitle = {Proc. Eur. Conf. Comput. Vis. (ECCV)},
+  pages     = {260--275},
+  year      = {2020}
+}
+
+@article{huang2024sarqa,
+  author  = {Huang, Min and Zhao, Hao and Chen, Yu},
+  title   = {Research on {SAR} Image Quality Evaluation Method Based on Improved {Harris} Hawk Optimization Algorithm and {XGBoost}},
+  journal = {Scientific Reports},
+  volume  = {14},
+  note    = {Art. no. 28364},
+  year    = {2024}
+}
+
+@article{sun2021bifa,
+  author  = {Sun, Zhongzhen and Leng, Xiangguang and Lei, Yu and Xiong, Boli and Ji, Kefeng and Kuang, Gangyao},
+  title   = {{BiFA-YOLO}: A Novel {YOLO}-Based Method for Arbitrary-Oriented Ship Detection in High-Resolution {SAR} Images},
+  journal = {Remote Sensing},
+  volume  = {13},
+  number  = {21},
+  pages   = {4209},
+  year    = {2021},
+  doi     = {10.3390/rs13214209}
+}
+
+@article{zhang2021ssdd,
+  author  = {Zhang, Tianwen and Zhang, Xiaoling and Li, Jianwei and Xu, Xiaowo and Wang, Baoyou and Zhan, Xu and Xu, Yanqin and Ke, Xiao and Zeng, Tianjiao and Su, Hao and Ahmad, Israr and Pan, Dece and Liu, Chang and Zhou, Yue and Shi, Jun and Wei, Shunjun},
+  title   = {{SAR} Ship Detection Dataset ({SSDD}): Official Release and Comprehensive Data Analysis},
+  journal = {Remote Sensing},
+  volume  = {13},
+  number  = {18},
+  pages   = {3690},
+  year    = {2021},
+  doi     = {10.3390/rs13183690}
+}
+
+@article{li2022survey,
+  author  = {Li, Jianwei and Xu, Congan and Su, Hang and Gao, Long and Wang, Taoyang},
+  title   = {Deep Learning for {SAR} Ship Detection: Past, Present and Future},
+  journal = {Remote Sensing},
+  volume  = {14},
+  number  = {11},
+  pages   = {2712},
+  year    = {2022},
+  doi     = {10.3390/rs14112712}
+}

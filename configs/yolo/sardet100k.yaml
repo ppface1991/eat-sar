@@ -1,0 +1,11 @@
+path: /root/autodl-tmp/eat-sar-work/sardet_root
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: ship
+  1: aircraft
+  2: car
+  3: tank
+  4: bridge
+  5: harbor

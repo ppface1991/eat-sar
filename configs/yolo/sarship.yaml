@@ -1,0 +1,5 @@
+path: /root/autodl-tmp/eat-sar-work/sarship_root
+train: train.txt
+val: val.txt
+names:
+  0: ship
